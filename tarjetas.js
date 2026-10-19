@@ -12,9 +12,14 @@ function crearTarjetas() {
         hastastr=hasta.value;
         hastaEntero=parseInt(hastastr);
 
+    let salto = document.getElementById("txtSalto");
+        saltostr=salto.value;
+        saltoEntero=parseInt(saltostr);
+
+
     let contenido = "";
     let divTarjetas = document.getElementById("divTarjetas");
-    for (let i =desdeEntero; i<=hastaEntero; i++){
+    for (let i =desdeEntero; i<=hastaEntero; i+=saltoEntero){
         contenido =  contenido + "<div class='item'>" + i + "</div>";
         //console.log (contenido);
         divTarjetas.innerHTML=contenido
